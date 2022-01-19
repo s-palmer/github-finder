@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import RepoItem from './RepoItem'
+import RepoItem from "./RepoItem"
 
 const RepoList = ({repos}) => {
   return (
