@@ -12,7 +12,7 @@ const User = () => {
 
   useEffect(() => {
     getUser(params.login);
-  }, []);
+  }, [params.login, getUser]);
 
   const {
     name,
