@@ -47,7 +47,7 @@ const UserSearch = () => {
       </div>
       {users.length > 0 && (
         <div>
-          <button className="btn btn-ghost btn-lg" onClick={clearUsers}>Clear</button>
+          <button className="btn btn-ghost btn-lg" onClick={clearUsers}>Clear Current Results</button>
         </div>
       )}
     </div>
