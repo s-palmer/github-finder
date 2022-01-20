@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const About = () => {
   return (
     <div>
@@ -9,12 +7,12 @@ const About = () => {
       </h1>
       <p>
         Built by{" "}
-        <Link
-          to="https://github.com/s-palmer"
+        <a
+          href="https://github.com/s-palmer"
           className="text-decoration-line: underline"
         >
           Sergei Palmer
-        </Link>
+        </a>
       </p>
     </div>
   );
