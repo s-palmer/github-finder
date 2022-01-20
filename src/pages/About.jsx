@@ -10,6 +10,8 @@ const About = () => {
         <a
           href="https://github.com/s-palmer"
           className="text-decoration-line: underline"
+          target="_blank"
+          rel="noreferrer"
         >
           Sergei Palmer
         </a>
