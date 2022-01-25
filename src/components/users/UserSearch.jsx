@@ -6,7 +6,7 @@ import { searchUsers } from "../../context/github/GithubActions";
 const UserSearch = () => {
   const [text, setText] = useState("");
 
-  const { users, clearUsers, dispatch } = useContext(GithubContext);
+  const { users, dispatch } = useContext(GithubContext);
   const { setAlert } = useContext(AlertContext);
 
   const handleChange = (e) => {
@@ -17,16 +17,14 @@ const UserSearch = () => {
     e.preventDefault();
 
     if (text === "") {
-      setAlert("Enter a search","error");
+      setAlert("Enter a search", "error");
     } else {
-      dispatch({type: 'SET_LOADING'})
+      dispatch({ type: "SET_LOADING" });
       const users = await searchUsers(text);
-      dispatch({type: 'GET_USERS', payload: users})
+      dispatch({ type: "GET_USERS", payload: users });
 
       setText("");
     }
-
-    
   };
 
   return (
@@ -54,7 +52,10 @@ const UserSearch = () => {
       </div>
       {users.length > 0 && (
         <div>
-          <button className="btn btn-outline btn-lg" onClick={clearUsers}>
+          <button
+            className="btn btn-outline btn-lg"
+            onClick={() => dispatch({ type: "CLEAR_USERS" })}
+          >
             Clear Current Results
           </button>
         </div>
